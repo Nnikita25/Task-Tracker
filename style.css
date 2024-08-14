@@ -1,0 +1,172 @@
+:root {
+    --background-color-light: #f0f0f0;
+    --background-color-dark: #2c2c2c;
+    --text-color-light: #333;
+    --text-color-dark: #f0f0f0;
+    --container-bg-light: #ffffff;
+    --container-bg-dark: #3c3c3c;
+    --button-bg-light: #4caf50;
+    --button-bg-dark: #388e3c;
+    --button-hover-light: #45a049;
+    --button-hover-dark: #2e7d32;
+    --edit-btn-bg-light: #2196f3;
+    --edit-btn-bg-dark: #1565c0;
+    --delete-btn-bg-light: #f44336;
+    --delete-btn-bg-dark: #d32f2f;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--container-bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    transition: background-color 0.3s;
+}
+
+h1 {
+    text-align: center;
+    color: var(--button-bg-light);
+    margin-bottom: 20px;
+}
+
+#theme-toggle-btn {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--button-bg-light);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle-btn:hover {
+    background-color: var(--button-hover-light);
+}
+
+.task-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--button-bg-light);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+    background-color: var(--button-hover-light);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: var(--container-bg-light);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+li span {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    background-color: var(--edit-btn-bg-light);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin: 0 .2rem;
+    font-size: 1rem;
+}
+
+.edit-btn {
+    background-color: var(--edit-btn-bg-light);
+}
+
+.delete-btn {
+    background-color: var(--delete-btn-bg-light);
+}
+
+.edit-btn:hover {
+    background-color: var(--edit-btn-bg-dark);
+}
+
+.delete-btn:hover {
+    background-color: var(--delete-btn-bg-dark);
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .container {
+    background-color: var(--container-bg-dark);
+}
+
+body.dark-mode #theme-toggle-btn {
+    background-color: var(--button-bg-dark);
+}
+
+body.dark-mode #theme-toggle-btn:hover {
+    background-color: var(--button-hover-dark);
+}
+
+body.dark-mode #add-task-btn {
+    background-color: var(--button-bg-dark);
+}
+
+body.dark-mode #add-task-btn:hover {
+    background-color: var(--button-hover-dark);
+}
+
+body.dark-mode li {
+    background-color: var(--container-bg-dark);
+}
